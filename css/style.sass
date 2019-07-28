@@ -1,0 +1,120 @@
+// Colors from: http://clrs.cc/ via @mrmrs_
+$aqua:  #7FDBFF
+$blue:  #0074D9
+$navy:  #001F3F
+$teal:  #39CCCC
+$green: #2ECC40
+$olive: #3D9970
+$lime:  #01FF70
+
+$yellow:  #FFDC00
+$orange:  #FF851B
+$red:     #FF4136
+$fuchsia: #F012BE
+$purple:  #B10DC9
+$maroon:  #85144B
+
+$white:  #fff
+$silver: #ddd
+$gray:   #aaa
+$black:  #111
+
+$dark-gray: #232127
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false)
+  @if $inset
+    -webkit-box-shadow:inset $top $left $blur $color
+    -moz-box-shadow:inset $top $left $blur $color
+    box-shadow:inset $top $left $blur $color
+  @else
+    -webkit-box-shadow: $top $left $blur $color
+    -moz-box-shadow: $top $left $blur $color
+    box-shadow: $top $left $blur $color
+
+@mixin ga-mixin
+  -webkit-filter: drop-shadow(8px 8px 10px black) /* Safari */
+  filter: drop-shadow(8px 8px 10px black)
+  background-position: center center
+  background-repeat: no-repeat
+  width: 100px
+  height: 100px
+  display: inline-block
+  border-radius: 50%
+  background-color: $dark-gray
+  // margin: 10px 10px 10px 10px
+  &:hover
+    filter: alpha(opacity=100)
+    opacity: .8
+    transform: scale(1.1)
+
+body
+  background: url('../img/5.jpg') no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  height: 200vh
+
+.clock
+  // top right bottom left
+  padding: 50px 0 0 0
+  text-align: center
+
+iframe
+  background: rgba(0,0,0,0.4)
+  border-radius: 10px
+  box-shadow: 0px 3px 2px black, 0px 4px 5px black
+.greetings
+  text-align: center
+  color: white
+  font-size: 1.7vmax
+  box-shadow: 0px 3px 2px black
+  margin: 0 auto
+  width: 30%
+
+.wrapper
+  display: grid
+  margin: 0 auto
+  width: 500px
+  height: 500px
+  background: rgba(0,0,0,0.5)
+  filter: alpha(opacity=10)
+  border-radius: 5px
+  grid-template-columns: repeat(4, 80px)
+  grid-template-rows: repeat(4, 130px)
+  justify-content: space-around
+  @include box-shadow(5px, 5px, 10px, $black)
+  padding: 20px
+  .ga-twitch + .ga-facebook + .ga-pinterest + .ga-google + .ga-youtube + .ga-kissanime + .ga-netflix
+    margin-top: 10px
+  .ga-twitch
+    background: url('../svgs/twitch.svg') no-repeat
+    @include ga-mixin
+
+  .ga-facebook
+    background-image: url('../svgs/facebook.svg')
+    @include ga-mixin
+
+  .ga-pinterest
+    background-image: url('../svgs/pinterest.svg')
+    @include ga-mixin
+
+  .ga-google
+    background-image: url('../svgs/search.svg')
+    @include ga-mixin
+
+  .ga-youtube
+    background-image: url('../svgs/youtube.svg')
+    @include ga-mixin
+
+  .ga-netflix
+    background-image: url('../svgs/netflix.svg')
+    @include ga-mixin
+
+  .ga-kissanime
+    background-image: url('../svgs/anime.svg')
+    @include ga-mixin
+
+  .ga-IG
+    background-image: url('../svgs/instagram.svg')
+    @include ga-mixin
