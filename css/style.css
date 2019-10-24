@@ -32,13 +32,13 @@ iframe {
   filter: alpha(opacity=10);
   border-radius: 5px;
   grid-template-columns: repeat(4, 80px);
-  grid-template-rows: repeat(4, 130px);
+  grid-template-rows: repeat(3, 130px);
   justify-content: space-around;
   -webkit-box-shadow: 5px 5px 10px #111;
   -moz-box-shadow: 5px 5px 10px #111;
   box-shadow: 5px 5px 10px #111;
   padding: 20px; }
-  .wrapper .ga-twitch + .ga-facebook + .ga-pinterest + .ga-google + .ga-youtube + .ga-kissanime + .ga-netflix {
+  .wrapper .ga-twitch + .ga-facebook + .ga-pinterest + .ga-google + .ga-youtube + .ga-kissanime + .ga-netflix + .ga-IG + .ga-learn {
     margin-top: 10px; }
   .wrapper .ga-twitch {
     background: url("../svgs/twitch.svg") no-repeat;
@@ -157,6 +157,51 @@ iframe {
     border-radius: 50%;
     background-color: #232127; }
     .wrapper .ga-IG:hover {
+      filter: alpha(opacity=100);
+      opacity: .8;
+      transform: scale(1.1); }
+  .wrapper .ga-soundcloud {
+    background-image: url("../svgs/soundcloud.svg");
+    -webkit-filter: drop-shadow(8px 8px 10px black);
+    filter: drop-shadow(8px 8px 10px black);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #232127; }
+    .wrapper .ga-soundcloud:hover {
+      filter: alpha(opacity=100);
+      opacity: .8;
+      transform: scale(1.1); }
+  .wrapper .ga-github {
+    background-image: url("../svgs/github.svg");
+    -webkit-filter: drop-shadow(8px 8px 10px black);
+    filter: drop-shadow(8px 8px 10px black);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #232127; }
+    .wrapper .ga-github:hover {
+      filter: alpha(opacity=100);
+      opacity: .8;
+      transform: scale(1.1); }
+  .wrapper .ga-learn {
+    background-image: url("../svgs/otter.svg");
+    -webkit-filter: drop-shadow(8px 8px 10px black);
+    filter: drop-shadow(8px 8px 10px black);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: white; }
+    .wrapper .ga-learn:hover {
       filter: alpha(opacity=100);
       opacity: .8;
       transform: scale(1.1); }
